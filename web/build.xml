@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gix5" basedir="." default="makewar">     
+    <property name="classpath.lib" value="${basedir}/web/WEB-INF/lib" />     
+    <property name="sources" value="${basedir}/src"/> 
+	<property name="build.root" value="c:/tools/build"/> 
+	<property name="build.gix5.webroot" value="build/gix5/webapp"></property>
+	<!-- 此处的Jboss Home路径需要根据的安装路径进行修改 -->
+	<!--
+	<property name="jboss.home" value="d:/jboss-4.2.3.GA" />
+	-->
+	<property name="jboss.home" value="D:/bigdatafolder/ide/jboss-4.2.3.GA" />	
+       
+	<!-- 构建编译工程的类路径 -->
+    <path id="classpath">  
+    	<!--添加lib 中的jar -->        
+        <fileset dir="${classpath.lib}">        
+            <include name="*.jar"/>        
+        </fileset>  
+	    <!--添加jboss lib 中的包-->  
+    	<fileset dir="${jboss.home}/server/default/lib"> 
+	        <include name="*.jar"/> 
+	    </fileset>
+	    <fileset dir="${jboss.home}/lib"> 
+	        <include name="*.jar"/> 
+	    </fileset>       
+    </path>        
+         
+	<!-- 准备构建打包程序所需的资源 -->
+    <target name="init">   
+        <mkdir dir="${build.gix5.webroot}\WEB-INF\classes"/>     
+        <copy todir="${build.gix5.webroot}">     
+            <fileset dir="${basedir}\web">     
+            	<include name="*.jsp"/>
+        		<include name="css/**/*.*"/>
+            	<include name="font/*.*"/>
+        		<include name="decorators/**/*.*"/>
+        		<include name="images/**/*.*"/>
+        		<include name="js/**/*.*"/>
+        		<include name="META-INF/*.*"/>
+				<include name="WEB-INF/*.*"/>
+				<include name="WEB-INF/View/*.*"/>    
+            </fileset>     
+        </copy>     
+    </target>     
+    <target name="complie" depends="init"> 
+        <javac srcdir="${sources}" destdir="${build.gix5.webroot}\WEB-INF\classes" encoding="UTF-8" classpathref="classpath" includeantruntime="on">     
+        </javac>
+    	<copy todir="${build.gix5.webroot}\WEB-INF\classes">     
+            <fileset dir="${sources}">     
+            	<include name="*.*"/>    
+            </fileset>     
+        </copy>
+    </target>  
+    <!--生成war 包结构-->     
+    <target name="makewar" depends="complie">
+        <war warfile="${build.root}/gix5.war" webxml="${build.gix5.webroot}/WEB-INF/web.xml" encoding="GBK">     
+        	<fileset dir="${build.gix5.webroot}">
+        		<!--<exclude name="WEB-INF/lib/*.jar"/>-->
+			</fileset>    
+        </war> 
+    	<delete dir="${build.gix5.webroot}"/>
+    </target>     
+</project>

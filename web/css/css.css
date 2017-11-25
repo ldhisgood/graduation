@@ -1,0 +1,38 @@
+/*请默认样式*/
+*{margin:0;padding:0;}
+
+body{ font-size:12px; margin:0; font-family:'宋体';}
+h1,h2,h3,h4,h5,h6{ margin:0; font-weight:normal; font-size:12px;}
+
+p{ margin:0; padding:0;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+a img{ border:none;}
+ol,ul,dl{list-style:none;}
+.fr{ float:right;}
+.fl{ float:left;}
+.p10{ padding:0 10px;}
+a{text-decoration:none; color:#666; background:none;}
+.clearfix:after{display:block;content:"";clear:both;}
+.clearfix{zoom:1;}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/*内容*/
+.s_box{ width:80%; margin:20px auto; font-size:14px;font-family:"微软雅黑";}
+.s_box tr {margin-top:10px;height:36px;}
+.s_box .left{width:25%; text-align:right; color:#666; }
+.s_box .left2{width:15%; text-align:right; color:#666; }
+.s_box .right{padding-left:15px; width:70%;}
+.s_box .right2{padding-left:15px; width:25%;}
+.s_box input{padding-left:10px;  margin-bottom:15px;}
+.s_btn{ width:100%;margin-top:15px;}
+.s_btn_l{ width:45%;text-align:right;padding-right:5%;}
+.s_btn_r{ width:45%;text-align:left;padding-left:5%;}
+.s_box input[type=text]{width:154px;}
+/*选择功能盒子*/
+.role_choose{width:80%; margin:5px auto; height:20px;}
+/*计划中的详情*/
+.maintainplan_detail{color:blue;cursor:pointer;}

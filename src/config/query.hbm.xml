@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="config">
+    <!-- 查询的是平台月交易量 -->
+    <sql-query name="queryPlaM">
+       <![CDATA[
+       		select date_format(o.intime,'%m') rq,sum(o.perprice) zj,
+       		count(o.perprice) sl,avg(o.perprice)pj from t_standing o 
+       		where date_format(o.intime,'%Y')=2016
+       		group by date_format(o.intime,'%m') 
+       	
+       ]]>
+    </sql-query>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

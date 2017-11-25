@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+/*请默认样式*/
+*{margin:0;padding:0;}
+
+body{ font-size:12px; margin:0; font-family:'宋体';}
+h1,h2,h3,h4,h5,h6{ margin:0; font-weight:normal; font-size:12px;}
+
+p{ margin:0; padding:0;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+a img{ border:none;}
+ol,ul,dl{list-style:none;}
+.fr{ float:right;}
+.fl{ float:left;}
+.p10{ padding:0 10px;}
+a{text-decoration:none; color:#666; background:none;}
+.clearfix:after{display:block;content:"";clear:both;}
+.clearfix{zoom:1;}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/*内容*/
+.box{width:100%; height:388px; background:url(../image/b.png) no-repeat center center;}
+.content{ width:650px; height:394px; position:absolute; top:50%; left:50%; margin-top:-197px; margin-left:-325px; background:#fff; border:1px solid #eee; box-shadow: 5px 5px 5px 0px #d3d3d3;
+}
+.list{ width:435px; margin:53px auto;}
+.list_s{ font-weight:bold; font-size:26px; color:#0056a2; margin-left:20px;}
+.btn{ margin-bottom:45px;}
+.mian{ margin-bottom:15px;}
+.mian_user{ width:55px; margin-right:24px; margin-top:10px;}
+.mian_user span{ display:block; text-align:right; color:#595959;}
+.mian_user .mian_s{ color:#a4a4a4;}
+.mian input{ width:290px; height:44px; border:1px solid #a4a4a4; background:url(../image/c.png) no-repeat left center; padding-left:44px; line-height:44px; color:#999;}
+.mian_span{width:42px; height:36px; background:url(../image/v.png) no-repeat; position:absolute; right:0; top:5px;}
+#oder{ background:url(/blt/image/n.png) no-repeat left center;}
+.miak{width:334px; height:44px; position:relative;}
+.pass{ text-align:right; padding-right:20px; margin-bottom:25px;}
+.pass a:hover{ color:#fd0024;}
+.pass_btn{ width:260px; margin-left:80px;}
+.pass_btn button{ border:0; background:0;width:120px; height:37px; background:#0056a2; color:#fff; font-weight:bold; cursor: pointer; margin-right:5px; }
+.message{color:#fd0024; text-align:right; margin:20px 0; padding-right:67px; font-family:'微软雅黑';}
